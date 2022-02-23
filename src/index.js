@@ -19,7 +19,7 @@ function onInputSearch(event) {
         return;
     }
 
-    fetchCountries(`${inputValue}?fields=name,capital,population,flags,languages`)
+    fetchCountries(`${inputValue}`)
         .then(renderMarkup)
         .catch(() => {
             countryListRef.innerHTML = '';
